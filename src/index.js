@@ -33,7 +33,6 @@ async function listVariablesInFile(path) {
 
 async function replaceInFile(path, items) {
   const source = await readFile(path, "utf8");
-  console.log(items);
   const replacedSource = items.reduce(
     (acc, item) => acc.replaceAll(item[0], item[1]),
     source
